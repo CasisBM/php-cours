@@ -57,5 +57,5 @@ echo '$txt tout le monde<br>';
 
 $fruit = 'Kiwi';
 $fruit2 = 'Pomme';
-$fruit = 'Banabe'
+$fruit = 'Banane';
 ?>;
