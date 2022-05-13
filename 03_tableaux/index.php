@@ -122,7 +122,7 @@ echo var_dump($tab4);
 
 // print_r($planetes);
 // print_r($notes);
-*/
+
 // Créer un tableau avec les mois de l'annnée
 // - afficher la valeur de la 5 ligne de ce tableau
 // - afficher la vleur de l'index 10
@@ -173,9 +173,19 @@ echo $departement[29];
 $html = '';
 foreach ($departement as $key => $value) {
     # code...
-    $html .= '<p>' . $key . ' : ' . $value . '</p>';
+    $html .= '<p>' .$value  . ' possede le code postale suivant : ' . $key . '</p>';
 }
 echo $html;
+*/
+
+$tab = [];
+$tab[] = ['A','B','C'];
+$tab[] = ['Q','R','T'];
+$tab[] = ['E','U','P','I'];
+
+print_r($tab);
+
+echo $tab[0][2].$tab[2][0].$tab[2][2].$tab[2][2].$tab[2][3].$tab[0][2];
 
 echo '</pre>';
 
