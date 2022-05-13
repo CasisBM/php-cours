@@ -80,19 +80,101 @@ foreach ($ages as $key => $value) {
 }
 $html .= '</ul>';
 echo $html;
-*/
+
 
 //Creer un tableau $notes avec un prenom => une note
 //Afficher une liste ul des eleves et les notes
 //Marc a eu 15/20
 
-$notes = ['Michel'=> 12, 'Lucie' => 5, 'Didier'=>16, 'Marc' =>15];
+$fruits = 
+[
+    'banane'=> 'jaune' ,
+    'pomme' => 'rouge',
+    'kiwi'=>'vert'];
+$notes = [
+    'Michel'=> 12, 
+    'Lucie' => 5, 
+    'Didier'=>16, 
+    'Marc' =>15
+];
 $html = '<ul>';
 foreach ($notes as $key => $value) {
     # code...
     $html .= '<li>' . $key . ' a eu ' . $value . '/20</li>';
 }
 $html .= '</ul>';
+echo $html;
+$tab4 = array_merge($fruits,$notes);
+echo var_dump($tab4);
+
+//asort() // tri des valeurs d'un tableau par ordre croissant
+//https://www.php.net/manual/en/array.sorting.php
+
+// print_r($planetes);
+// print_r($notes);
+// echo '<hr>';
+// asort($planetes); // tri des valeurs d'un tableau par ordre croissant
+// asort($notes); 
+// rsort($notes); // tri tableau par ordre decroissant
+// ksort($notes); // tri tableau en fonction des clefs par ordre croissant
+// arsort($notes); // tri tableau en fonction des valeurs par ordre decroissant
+// krsort($notes); // tri en fonction des clefs par ordre decroissant
+
+// print_r($planetes);
+// print_r($notes);
+*/
+// Créer un tableau avec les mois de l'annnée
+// - afficher la valeur de la 5 ligne de ce tableau
+// - afficher la vleur de l'index 10
+// - modifier le mois d'avril en le mettant en majuscule
+
+$mois = [
+    'Janvier',
+    'Fevrier',
+    'Mars',
+    'Avril',
+    'Mai',
+    'Juin',
+    'Juillet',
+    'Aout',
+    'Septembre',
+    'Octobre',
+    'Novembre',
+    'Decembre'
+];
+
+echo $mois[4];
+echo $mois[10];
+
+$nomMois = 'Avril';
+$mois[array_search($nomMois,$mois)] = strtoupper($nomMois);
+//$nomMois = strtoupper('Avril');
+//echo $mois[array_search($nomMois,$mois)];
+
+// Créer un tableau associatif des departements de la region normandie
+// avec le nom du departement en valeur et son code postale en index
+// - afficher la valeur de l'index 27
+// - ajouter le departement et code postale de la ville de Brest
+// - parcourir le tableau des departements et afficher chaque departement dans un parapraphe p de la façon suivante :
+// Le 'nom du departement' possede le code postale suivant :  'code postale'
+echo '<hr>';
+$departement = [
+    14 => 'Calvados', 
+    27 => 'Eure', 
+    16 => 'Manche',
+    76 => 'Seine-Maritime',  
+    61 => 'Orne' 
+];
+$departement += [29 => 'Brest'];
+
+echo $departement[27];
+echo $departement[29];
+
+$html = '';
+foreach ($departement as $key => $value) {
+    # code...
+    $html .= '<p>' . $key . ' : ' . $value . '</p>';
+}
 echo $html;
 
 echo '</pre>';
