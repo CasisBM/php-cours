@@ -101,6 +101,8 @@ if (isset($var)) {
   echo '$var est définie même si elle est vide';
 }
 */
+// Faire une condition sur ce tableau : tester l'article à l'index 0 si il est non vide , sinon afficher "il n'ya pas d'articles"
+// Créer une branche articles , que vous fusionnerez avec main lorsque l'exercice est finit.
 $article = [];
 if (empty($article[0])) {
     echo 'il n\'a pas d\'article';

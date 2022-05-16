@@ -21,5 +21,10 @@
         <a href="./04_conditions/index.php">Conditions</a>
          
     </li>
+
+    <li>
+        <a href="./05_boucles/index.php">Boucles</a>
+         
+    </li>
   
 </ul>   
