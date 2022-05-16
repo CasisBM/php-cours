@@ -11,6 +11,7 @@ while($j <= 10){
 */
 $dateActuel = date("Y");
 $date = 1970;
+$nbJour=0;
 
 ?>
 
@@ -27,8 +28,10 @@ $date = 1970;
     <?php 
     while ($dateActuel >= $date) {
     echo "<li> $date </li>";
+    $nbJour += 365;
     $date++;
 }
+echo "Il y a eu $nbJour jour depuis 1970"
  ?>
 </ul>
 </body>
