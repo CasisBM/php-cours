@@ -11,7 +11,7 @@ while($j <= 10){
 */
 $dateActuel = date("Y");
 $date = 1970;
-$nbJour=0;
+$nbJour=-365;
 
 ?>
 
