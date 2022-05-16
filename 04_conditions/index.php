@@ -12,7 +12,7 @@ else{
 }
 
 
-*/
+
 
 //Avec la condition if/else afficher si on est le matin ou le soir
 
@@ -25,4 +25,21 @@ else
 {
     echo "C'est le soir";
 }
+*/
+//Avec la condition if/elseif/else afficher si on est le matin; l'apres-midi ou le soir
+
+$heure = 19;
+if($heure < 12){
+    echo "C'est le matin";
+}
+elseif($heure >= 18)
+{
+    echo "C'est le soir";
+}
+else{
+    echo "C'est l'après-midi";
+}
+
+
+
 ?>
