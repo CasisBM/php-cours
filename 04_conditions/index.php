@@ -1,4 +1,5 @@
 <?php 
+// https://www.php.net/manual/fr/language.operators.comparison.php
 //=================
 // if/elseif/else 
 //=================
@@ -25,7 +26,7 @@ else
 {
     echo "C'est le soir";
 }
-*/
+
 //Avec la condition if/elseif/else afficher si on est le matin; l'apres-midi ou le soir
 
 $heure = 18;
@@ -41,5 +42,68 @@ else{
 }
 
 
+//
+$a = 20;
+$b = 5;
+$c1 = 10;
+$c2 = '10';
+
+if($b != 3)
+{
+    //echo "la variable $b n'est pas égale à $b";
+}
+
+//Tester $c1 et $c2 avec == et ===
+var_dump($c1==$c2); 
+var_dump($c1 === $c2); 
+
+//=================
+// switch case
+//=================
+
+switch ($variable) {
+    case 'value':
+        # code...
+        break;
+    
+    default:
+        # code...
+        break;
+}
+
+//=================
+// match
+//=================
+
+$food = 'cake';
+
+$return_value = match ($food) {
+    'apple' => 'This food is an apple',
+    'bar' => 'This food is a bar',
+    'cake' => 'This food is a cake',
+};
+
+var_dump($return_value);
+
+//=================
+// empty/isset
+//=================
+
+$var = 0;
+                   
+// Évaluée à vrai car $var est vide
+if (empty($var)) {
+  echo '$var vaut soit 0, vide, ou pas définie du tout';
+}
+                   
+// Évaluée à vrai car $var est définie
+if (isset($var)) {
+  echo '$var est définie même si elle est vide';
+}
+*/
+$article = [];
+if (empty($article[0])) {
+    echo 'il n\'a pas d\'article';
+  }
 
 ?>
