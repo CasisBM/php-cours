@@ -20,3 +20,42 @@ Travail-02 :
 
 Vous trouverez une capture du resultat attendu.
  */
+echo '<pre>';
+$persons = file_get_contents("./persons.json");
+//var_dump($persons);
+
+$persons = json_decode($persons,true);
+
+/*
+foreach ($persons as $key => $value) {
+    # code...
+    if($value['name'] === 'Raymond Jimenez')
+    {
+       var_dump($value['friends'][2]['name']) ;
+    }
+    echo '<hr>';
+}
+*/
+// var_dump($persons["Raymond Jimenez"]) ;
+
+echo '</pre>';
+?>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     <h3>
+     <?php foreach ($persons as $key => $value) {
+          if($value['name'] === 'Raymond Jimenez')
+          {
+             echo $value['friends'][2]['name'];
+          }
+        }?>
+     </h3>
+ </body>
+ </html>
