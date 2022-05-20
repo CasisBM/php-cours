@@ -20,7 +20,8 @@ Travail-01 :
  foreach ($tabCelsius as $key => $value) {
      # code...
      //var_dump($value);
-     array_push($tabFahrenheit,($value * 9/5) + 32);
+     $valueToFahrenheit = round(($value * 9/5) + 32,0, PHP_ROUND_HALF_UP);
+     array_push($tabFahrenheit,$valueToFahrenheit);
  }
  $tab = array_combine($tabCelsius, $tabFahrenheit);
  //var_dump($tab);
