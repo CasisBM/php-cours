@@ -24,7 +24,7 @@ echo '<pre>';
 $persons = file_get_contents("./persons.json");
 //var_dump($persons);
 
-$persons = json_decode($persons,true);
+$persons = json_decode($persons, true);
 
 /*
 foreach ($persons as $key => $value) {
@@ -40,22 +40,45 @@ foreach ($persons as $key => $value) {
 
 echo '</pre>';
 ?>
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
- </head>
- <body>
-     <h3>
-     <?php foreach ($persons as $key => $value) {
-          if($value['name'] === 'Raymond Jimenez')
-          {
-             echo $value['friends'][2]['name'];
-          }
-        }?>
-     </h3>
- </body>
- </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <?php /*foreach ($persons as $key => $value) {
+        if ($value['name'] === 'Raymond Jimenez') { ?>
+            <h3><?= $value['friends'][2]['name']; ?> </h3>
+
+        <?php
+        }
+        if ($value['name'] === 'Ball Shaffer') { ?>
+            <strong> La couleur des yeux de Ball Shaffer est : <?= $value['eyeColor']; ?> </strong>
+    <?php
+        }
+    }
+    */ ?>
+
+    <?php foreach ($persons as $key => $value) {
+
+        echo '<img src="' . $value['picture'] . '"alt="picture">';
+        ?>
+        <p>Nom : <?= $value['name']; ?></p>
+        <p>Age : <?= $value['age']; ?></p>
+        <p>Couleur des yeux : <?= $value['eyeColor']; ?></p>
+        <p>email : <?= $value['email']; ?></p>
+        <p>Fruit favori : <?= $value['favoriteFruit']; ?></p>
+        <p><?php if ($value['isActive'] === true)  echo 'ACTIF' ; ?></p>
+        <p>Tags : <?= implode(",", $value['tags']);?></p>
+   <hr>     
+    <?php } ?>
+    
+
+</body>
+
+</html>
